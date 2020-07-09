@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 10px;
+}
+
+.App {
+  font-family: 'Source Code Pro', monospace;
+}
+
+header {
+  width: 100vw;
+  height: 85px;
+  text-align: center;
+  color: rgb(255, 203, 203);
+  background: #000;
+  position: fixed;
+  top: -50px;
+  padding: 7px 0;
+  transition: all .5s;
+}
+
+body {
+  background: #d8d1d1!important;
+}
+
+header h1 {
+  font-size: 20px;
+  line-height: .4;
+}
+
+section {
+  margin-top: 20px;
+}
+
+#logoMobile {
+  font-size: 40px;;
+}
+
+#onlineCounter {
+  background: rgb(255, 203, 203);
+  color: #fff;
+  padding: 5px 0;
+  width: 200vw;
+  position: relative;
+  height:30px
+}
+
+#onlineCounter p {
+  position: absolute;
+  animation: bannerMoveLeft 7s linear infinite;
+}
+
+#onlineCounter span {
+  font-weight: bold;
+}
+
+@keyframes bannerMoveLeft {
+  0% { left: 500px}
+  100% { left: -500px}
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw; 
+  background: #fff;
+  box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 9;
+}
+
+nav .nav-link {
+  padding: 20px 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page {
+  margin: 60px 1vw;
+}
+
+.drink-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.drink-container {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-bottom: 15px;
+}
+
+.card-info {
+  padding: 20px;
+  min-height: 150px;
+}
+
+.card-info h3{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.image-cover img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.custom-image-cover img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.upload-btn {
+  margin: 20px 0;
+}
+
+/* Singleview Page */
+
+.drink-view img {
+  width: 100%;
+}
+
+.drink-meta {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.ingredients-list {
+  margin-bottom: 10px;
+}
+
+/* Search */
+
+.sub-links {
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sub-links a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.4);
+  width: 100px;
+}
+
+.liquor-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  margin-bottom: 10px;
+}
+
+.liquor-links a {
+  background: rgb(90, 90, 90);
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.4);
+}
+
+.name-search {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Logout */
+
+.logout {
+text-align: center;
+}
+
+.logout-button {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0px -2px 7px rgba(0, 0, 0, 0.4);
+  border: none;
+  margin: 0 auto;
+  height: 50px;
+  width: 130px;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+.heart-button {
+  font-size: 30px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.pagination-nav ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination-nav li{
+  list-style-type: none;
+  margin: 5px 7px;
+  position: relative;
+}
+
+.pagination-nav a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.pagination-nav li:after {
+  content: '|';
+  position: absolute;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  #topTenDrinks, #searchContainer, .drink-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px
+  }
+  .sub-links a {
+    width: 200px
+  }
+  .drink-container {
+    grid-template-columns: 50% 50%;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .page {
+    margin: 60px 25vw;
+  }
+  header {
+    top: 100%
+  }
+  #onlineCounter{
+    top: -106px;
+  }
+  nav {
+    bottom: calc(100% - 60px);
+  }
+
+}
